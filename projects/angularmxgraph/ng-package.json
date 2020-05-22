@@ -1,0 +1,12 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/angularmxgraph",
+  "assets": ["../../node_modules/mxgraph/javascript/mxClient.js",
+             "src/asset.js"],
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  },
+  "whitelistedNonPeerDependencies": [
+    "mxgraph"
+  ]
+}

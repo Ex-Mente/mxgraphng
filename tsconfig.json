@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "angularmxgraph": [
+        "dist/angularmxgraph/angularmxgraph",
+        "dist/angularmxgraph"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
