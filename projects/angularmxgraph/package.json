@@ -5,7 +5,7 @@
   "scripts": {
     "build": "../../node_modules/.bin/tsc -p tsconfig.schematics.json",
     "copy:schemas": "pwd && cp --parents ./schematics/*/schema.json ../../dist/angularmxgraph/",
-    "copy:files": "cp --parents -p ./schematics/*/files/** ../../dist/angularmxgraph/",
+    "copy:files": "cp --parents -p -r ./schematics/*/files/** ../../dist/angularmxgraph/",
     "copy:collection": "cp ./schematics/collection.json ../../dist/angularmxgraph/schematics/collection.json",
     "postbuild": "npm run copy:schemas && npm run copy:files && npm run copy:collection"
   },

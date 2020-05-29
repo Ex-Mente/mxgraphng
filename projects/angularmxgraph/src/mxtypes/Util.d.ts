@@ -11,9 +11,9 @@ declare module Util {
 
 }
 
-/** 
-* The mxEventObject is a wrapper for all properties of a single event.  Additionally, it also offers functions 
-* to consume the event and check if it was consumed as follows: 
+/**
+* The mxEventObject is a wrapper for all properties of a single event.  Additionally, it also offers functions
+* to consume the event and check if it was consumed as follows:
 */
 declare class mxEventObject {
     constructor(name: string);
@@ -31,14 +31,14 @@ declare class mxEventObject {
     getProperty: (key: string) => any;
 }
 
-/** 
-* A wrapper class for an associative array with object keys.  Note: This implementation uses <mxObjectIdentitiy> to 
-* turn object keys into strings. 
+/**
+* A wrapper class for an associative array with object keys.  Note: This implementation uses <mxObjectIdentitiy> to
+* turn object keys into strings.
 */
 declare class mxDictionary {
 
     /** Stores the (key, value) pairs in this dictionary. */
-    map: any; 
+    map: any;
 
     /**
      * Returns the value for the given key.
@@ -62,15 +62,15 @@ declare class mxDictionary {
 
 
 
-/**    
+/**
 * Base class for objects that dispatch named events.  To create a subclass that inherits from mxEventSource, the following code is used.
 */
 declare class mxEventSource {
 
     /**
-     * Binds the specified function to the given event name.  If no event name is given, then the listener 
-     * is registered for all events. 
-     * The parameters of the listener are the sender and an mxEventObject. 
+     * Binds the specified function to the given event name.  If no event name is given, then the listener
+     * is registered for all events.
+     * The parameters of the listener are the sender and an mxEventObject.
      */
     addListener(name: any, func: Util.EventHandler);
 
@@ -80,19 +80,21 @@ declare class mxEventSource {
 * Encapsulates the URL, width and height of an image.
 */
 declare class mxImage {
-    
+
     /** Encapsulates the URL, width and height of an image. */
     constructor(src: string, width: number, height: number);
 
 }
 
 
-/** 
+/**
  * Cross-browser DOM event support
  */
 declare class mxEvent {
     static ADD: any;
     static REMOVE: any;
+    static ROOT: any;
+    static OPEN: any;
 }
 
 declare class mxMouseEvent {

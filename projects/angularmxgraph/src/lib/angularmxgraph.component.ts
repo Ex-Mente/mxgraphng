@@ -8,10 +8,9 @@ import {
   ViewChild
 } from '@angular/core';
 
-
-
 @Component({
-  selector: 'lib-angularmxgraph',
+  // tslint:disable-next-line:component-selector
+  selector: 'angularmxgraph',
   template: `
     <div #graphContainer id="graphContainer"></div>
   `,
@@ -23,6 +22,8 @@ export class AngularmxgraphComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   @ViewChild('graphContainer') graphContainer: ElementRef;
+
+  // xml input
 
   ngAfterViewInit(): void {
     const graph = new mxGraph(this.graphContainer.nativeElement);

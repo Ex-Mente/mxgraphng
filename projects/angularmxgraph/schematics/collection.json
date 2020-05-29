@@ -4,6 +4,11 @@
     "ng-add": {
       "description": "Add my library to the project.",
       "factory": "./ng-add/index#ngAdd"
+    },
+    "layouteditor": {
+      "description": "Generate an example mxGraph layout editor component.",
+      "factory": "./layouteditor/index#layoutEditor",
+      "schema": "./layouteditor/schema.json"
     }
   }
 }
