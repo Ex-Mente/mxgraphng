@@ -1,6 +1,6 @@
 {
-  "name": "angularmxgraph",
-  "version": "0.0.1",
+  "name": "@ex-mente/angularmxgraph",
+  "version": "0.0.2",
   "schematics": "./schematics/collection.json",
   "scripts": {
     "build": "../../node_modules/.bin/tsc -p tsconfig.schematics.json",
@@ -17,5 +17,9 @@
   },
   "dependencies": {
     "mxgraph": "^4.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Ex-Mente/angularmxgraph.git"
   }
 }

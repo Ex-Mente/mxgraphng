@@ -1,0 +1,53 @@
+///<reference path="../../../node_modules/angularmxgraph/mxtypes.d.ts"/>
+
+import {
+  AfterViewInit,
+  Component,
+  OnInit
+} from '@angular/core';
+
+@Component({
+  selector: 'app-<%= dasherize(name) %>',
+  templateUrl: './<%= dasherize(name) %>.component.html',
+  styleUrls: ['./<%= dasherize(name) %>.component.css']
+})
+export class <%= classify(name) %>Component implements AfterViewInit {
+  title = 'mxgraph-example-editor';
+
+  createEditor(config: any): any {
+    try {
+      if (!mxClient.isBrowserSupported())
+      {
+        console.log('Browser not supported');
+      } else {
+        console.log('Browser is supported');
+        mxObjectCodec.allowEval = true;
+        const node = mxUtils.load(config).getDocumentElement();
+        const editor = new mxEditor(node);
+        mxObjectCodec.allowEval = false;
+
+        // Adds active border for panning inside the container
+        editor.graph.createPanningManager = function()
+        {
+          const pm = new mxPanningManager(this);
+          pm.border = 30;
+
+          return pm;
+        };
+
+        editor.graph.allowAutoPanning = true;
+        editor.graph.timerAutoScroll = true;
+
+        // Displays version in statusbar
+        editor.setStatus('mxGraph ' + mxClient.VERSION);
+      }
+    } finally {
+      console.log('Done initialisation!');
+    }
+
+  }
+
+  ngAfterViewInit(): void {
+    this.createEditor('mxgraph/config/basiceditor.xml');
+  }
+}

@@ -9,6 +9,11 @@
       "description": "Generate an example mxGraph layout editor component.",
       "factory": "./layouteditor/index#layoutEditor",
       "schema": "./layouteditor/schema.json"
+    },
+    "basiceditor": {
+      "description": "Generate an basic mxGraph diagram editor component.",
+      "factory": "./basiceditor/index#basicEditor",
+      "schema": "./basiceditor/schema.json"
     }
   }
 }

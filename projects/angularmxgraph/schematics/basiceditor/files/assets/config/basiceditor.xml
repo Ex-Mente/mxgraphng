@@ -1,0 +1,168 @@
+<mxEditor layoutDiagram="1" layoutSwimlanes="1" maintainSwimlanes="1">
+
+  <ui>
+		<add as="graph" element="graph"
+			style="left:70px;right:20px;top:20px;bottom:40px"/>
+		<add as="status" element="status"
+			style="height:20px;bottom:20px;left:20px;right:20px"/>
+		<add as="toolbar" x="10" y="20" width="54"/>
+    <resource basename="/mxgraph/resources/app"/>
+	</ui>
+
+  <Array as="templates">
+		<add as="group">
+			<Group label="" description="" href="">
+				<mxCell vertex="1" style="group" connectable="0"/>
+			</Group>
+		</add>
+
+    <add as="edge">
+			<Edge label="" description="">
+				<mxCell edge="1">
+					<mxGeometry as="geometry" relative="1"/>
+				</mxCell>
+			</Edge>
+		</add>
+
+		<add as="task">
+			<Task label="Task" description="" href="" customattr="PennyWagon">
+				<mxCell vertex="1">
+					<mxGeometry as="geometry" width="72" height="32"/>
+				</mxCell>
+			</Task>
+		</add>
+
+		<add as="subprocess">
+			<Subprocess label="Subprocess" description="" href="">
+				<mxCell vertex="1" style="rounded">
+					<mxGeometry as="geometry" width="72" height="32"/>
+				</mxCell>
+			</Subprocess>
+		</add>
+
+		<add as="shape">
+			<Shape label="" description="" href="">
+				<mxCell vertex="1" style="ellipse">
+					<mxGeometry as="geometry" width="32" height="32"/>
+				</mxCell>
+			</Shape>
+		</add>
+
+		<add as="symbol">
+			<Symbol label="Symbol" description="" href="">
+				<mxCell vertex="1" style="symbol;image=images/symbols/event.png">
+					<mxGeometry as="geometry" width="32" height="32"/>
+				</mxCell>
+			</Symbol>
+		</add>
+	</Array>
+
+  <Array as="actions">
+    <add as="save"><![CDATA[
+      function (editor)
+      {
+
+        try
+        {
+          console.log("I'm trying to save now!!!");
+          console.log(editor.writeGraphModel('\n'));
+          editor.save();
+        }
+        catch (e)
+        {
+          mxUtils.error('Cannot save : ' + e.message, 280, true);
+        }
+      }
+    ]]></add>
+  </Array>
+
+	<mxGraph as="graph">
+		<mxStylesheet as="stylesheet">
+			<add as="defaultEdge">
+				<add as="shape" value="connector"/>
+				<add as="elbow" value="vertical"/>
+				<add as="fontSize" value="10"/>
+				<add as="strokeColor" value="black"/>
+				<add as="rounded" value="1"/>
+				<add as="edgeStyle" value="elbowEdgeStyle"/>
+				<add as="endArrow" value="classic"/>
+			</add>
+
+      <add as="defaultVertex">
+        <add as="shape" value="label"/>
+        <add as="perimeter" value="rectanglePerimeter"/>
+        <add as="labelBackgroundColor" value="white"/>
+        <add as="fontSize" value="10"/>
+        <add as="align" value="center"/>
+        <add as="verticalAlign" value="middle"/>
+        <add as="strokeColor" value="black"/>
+      </add>
+
+      <add as="rounded">
+        <add as="rounded" value="1"/>
+      </add>
+
+      <add as="ellipse">
+        <add as="shape" value="ellipse"/>
+        <add as="perimeter" value="ellipsePerimeter"/>
+      </add>
+
+      <add as="rhombus">
+        <add as="shape" value="rhombus"/>
+        <add as="perimeter" value="rhombusPerimeter"/>
+      </add>
+
+      <add as="actor">
+        <add as="shape" value="actor"/>
+      </add>
+
+      <add as="symbol">
+        <add as="shape" value="image"/>
+        <add as="perimeter" value="rectanglePerimeter"/>
+        <add as="labelBackgroundColor" value="white"/>
+        <add as="fontSize" value="10"/>
+        <add as="align" value="center"/>
+        <add as="verticalAlign" value="top"/>
+        <add as="verticalLabelPosition" value="bottom"/>
+      </add>
+		</mxStylesheet>
+	</mxGraph>
+
+  <mxDefaultPopupMenu as="popupHandler">
+    <add as="properties" action="showProperties" icon="mxgraph/images/properties.gif"/>
+  </mxDefaultPopupMenu>
+
+	<mxDefaultToolbar as="toolbar">
+		  <add as="save" action="save" icon="mxgraph/images/save.gif"/>
+      <br/><hr/>
+      <add as="select" mode="select" icon="mxgraph/images/select.gif"/>
+      <add as="pan" mode="pan" icon="mxgraph/images/pan.gif"/>
+      <add as="connect" mode="connect" icon="mxgraph/images/connect.gif"><![CDATA[
+        function (editor)
+        {
+          if (editor.defaultEdge != null)
+          {
+            editor.defaultEdge.style = null;
+          }
+        }
+      ]]></add>
+      <add as="connect" mode="connect" icon="mxgraph/images/straight.gif"><![CDATA[
+        function (editor)
+        {
+          if (editor.defaultEdge != null)
+          {
+            editor.defaultEdge.style = 'straightEdge';
+          }
+        }
+      ]]></add>
+      <br/><hr/>
+      <add as="group" action="group" icon="mxgraph/images/group.gif"/>
+      <add as="ungroup" action="ungroup" icon="mxgraph/images/ungroup.gif"/>
+      <br/><hr/>
+      <add as="Task" template="task" icon="mxgraph/images/rectangle.gif"/>
+      <add as="Subprocess" template="subprocess" icon="mxgraph/images/rounded.gif"/>
+      <add as="Ellipse" template="shape" style="ellipse" icon="mxgraph/images/ellipse.gif"/>
+      <add as="Rhombus" template="shape" style="rhombus" icon="mxgraph/images/rhombus.gif"/>
+      <add as="Actor" template="shape" style="actor" icon="mxgraph/images/actor.gif"/>
+	</mxDefaultToolbar>
+</mxEditor>
