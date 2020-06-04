@@ -1,3 +1,8 @@
+/**
+ * @summary:    This declaration file bundles together all the mxgraphng
+ *              declaration files in ./mxtypes.
+ */
+
 /// <reference path="./mxtypes/Handlers.d.ts" />
 /// <reference path="./mxtypes/Model.d.ts" />
 /// <reference path="./mxtypes/mxGraph.d.ts" />

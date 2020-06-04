@@ -1,10 +1,20 @@
+/**
+ * @summary:      This file defines the <%= classify(name) %>Component class.
+ *
+ * @description:  The mxgraph type declarations that are part of the mxgraphng
+ *                library are referenced here. Since mxgraph is a pure
+ *                JavaScript package, TypeScript has to be aware of the existence
+ *                and shape of the variables.
+ *                The diagram editor component's ui layout is fully described in
+ *                an xml file that is part of the mxgraph asset files. This xml
+ *                file is loaded via an mxgraph utility function. The actual
+ *                DOM elements that the diagram component is displayed in are
+ *                defined in the component .html template file.
+ */
+
 ///<reference path="../../../node_modules/angularmxgraph/mxtypes.d.ts"/>
 
-import {
-  AfterViewInit,
-  Component,
-  OnInit
-} from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-<%= dasherize(name) %>',
@@ -12,7 +22,7 @@ import {
   styleUrls: ['./<%= dasherize(name) %>.component.css']
 })
 export class <%= classify(name) %>Component implements AfterViewInit {
-  title = 'mxgraph-example-editor';
+  title = 'mxgraph-<%= dasherize(name) %>';
 
   createEditor(config: any): any {
     try {

@@ -1,3 +1,8 @@
+/**
+ * @summary Global configuration options for mxgraph. This file must be included
+ *          before the mxClient.js library file.
+ */
+
 // Specifies the path in <mxClient.basePath>.
 mxBasePath = "/mxgraph"
 
