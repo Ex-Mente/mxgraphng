@@ -17,7 +17,7 @@ import {
   styles: [
   ]
 })
-export class AngularmxgraphComponent implements OnInit, AfterViewInit {
+export class MxgraphngComponent implements OnInit, AfterViewInit {
 
   constructor() { }
 

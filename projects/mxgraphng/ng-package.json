@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/angularmxgraph",
+  "dest": "../../dist/mxgraphng",
   "assets": ["../../node_modules/mxgraph/javascript/mxClient.js",
              "src/asset.js"],
   "lib": {

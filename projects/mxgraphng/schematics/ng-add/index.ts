@@ -15,7 +15,7 @@
 import {apply, chain, mergeWith, move, Rule, SchematicContext,
   Tree, url} from '@angular-devkit/schematics';
 import { NodePackageInstallTask } from '@angular-devkit/schematics/tasks';
-import {normalize} from "@angular-devkit/core";
+import {normalize} from '@angular-devkit/core';
 
 /**
  * Main entry point of the Angular add schematic.

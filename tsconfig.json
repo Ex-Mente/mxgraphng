@@ -16,9 +16,9 @@
       "dom"
     ],
     "paths": {
-      "angularmxgraph": [
-        "dist/angularmxgraph/angularmxgraph",
-        "dist/angularmxgraph"
+      "mxgraphng": [
+        "dist/mxgraphng/mxgraphng",
+        "dist/mxgraphng"
       ]
     }
   },

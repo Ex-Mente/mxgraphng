@@ -3,38 +3,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularmxgraph": {
+    "mxgraphng": {
       "projectType": "library",
-      "root": "projects/angularmxgraph",
-      "sourceRoot": "projects/angularmxgraph/src",
+      "root": "projects/mxgraphng",
+      "sourceRoot": "projects/mxgraphng/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/angularmxgraph/tsconfig.lib.json",
-            "project": "projects/angularmxgraph/ng-package.json"
+            "tsConfig": "projects/mxgraphng/tsconfig.lib.json",
+            "project": "projects/mxgraphng/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/angularmxgraph/tsconfig.lib.prod.json"
+              "tsConfig": "projects/mxgraphng/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/angularmxgraph/src/test.ts",
-            "tsConfig": "projects/angularmxgraph/tsconfig.spec.json",
-            "karmaConfig": "projects/angularmxgraph/karma.conf.js"
+            "main": "projects/mxgraphng/src/test.ts",
+            "tsConfig": "projects/mxgraphng/tsconfig.spec.json",
+            "karmaConfig": "projects/mxgraphng/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/angularmxgraph/tsconfig.lib.json",
-              "projects/angularmxgraph/tsconfig.spec.json"
+              "projects/mxgraphng/tsconfig.lib.json",
+              "projects/mxgraphng/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -43,5 +43,5 @@
         }
       }
     }},
-  "defaultProject": "angularmxgraph"
+  "defaultProject": "mxgraphng"
 }

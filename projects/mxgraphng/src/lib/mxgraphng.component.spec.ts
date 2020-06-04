@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AngularmxgraphComponent } from './angularmxgraph.component';
+import { MxgraphngComponent } from './mxgraphng.component';
 
 describe('AngularmxgraphComponent', () => {
-  let component: AngularmxgraphComponent;
-  let fixture: ComponentFixture<AngularmxgraphComponent>;
+  let component: MxgraphngComponent;
+  let fixture: ComponentFixture<MxgraphngComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AngularmxgraphComponent ]
+      declarations: [ MxgraphngComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AngularmxgraphComponent);
+    fixture = TestBed.createComponent(MxgraphngComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

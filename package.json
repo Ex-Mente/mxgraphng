@@ -1,6 +1,19 @@
 {
-  "name": "angularmxgraph",
-  "version": "0.0.1",
+  "name": "mxgraphng",
+  "version": "1.0.0",
+  "description": "An Angular library that allows creating an mxgraph diagram component."
+  "author": "Ruan Theron",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ex-Mente/mxgraphng.git"
+  },
+  "homepage": "https://github.com/Ex-Mente/mxgraphng",
+  "keywords": [
+    "angular",
+    "mxgraph",
+    "graphs",
+    "diagrams"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +21,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "buildlib": "ng build angularmxgraph && cd projects/angularmxgraph && npm run build && cd ../../dist/angularmxgraph && npm pack"
+    "buildlib": "ng build mxgraphng && cd projects/mxgraphng && npm run build && cd ../../dist/mxgraphng && npm pack"
   },
   "dependencies": {
     "@angular/animations": "~9.1.7",
