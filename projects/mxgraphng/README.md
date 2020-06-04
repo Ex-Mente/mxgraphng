@@ -3,7 +3,7 @@ mxgraphng
 
 Purpose
 -------
-[mxgraph](https://jgraph.github.io/mxgraph/)is an open-source client-side JavaScript library that is used to
+[mxgraph](https://jgraph.github.io/mxgraph/) is an open-source client-side JavaScript library that is used to
 display interactive diagrams and graphs. The purpose of `mxgraphng` is to
 facilitate the process of importing `mxgraph` into an Angular project.
 
