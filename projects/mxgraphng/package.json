@@ -1,6 +1,20 @@
 {
   "name": "mxgraphng",
-  "version": "1.0.0",
+  "version": "0.1.0",
+  "description": "An Angular library that allows creating an mxgraph diagram component.",
+  "author": "Ruan Theron",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ex-Mente/mxgraphng.git"
+  },
+  "homepage": "https://github.com/Ex-Mente/mxgraphng",
+  "keywords": [
+    "angular",
+    "mxgraph",
+    "graphs",
+    "diagrams"
+  ],
+  "license": "MIT",
   "schematics": "./schematics/collection.json",
   "scripts": {
     "build": "../../node_modules/.bin/tsc -p tsconfig.schematics.json",
